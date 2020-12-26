@@ -1,0 +1,26 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.main{
+	width: 100%;
+}
+
+
+.container{
+	margin: 100px 0;
+}
+
+.card{
+	border: none!important;
+	text-align: center;
+}
+
+
+
+.card-body{
+	margin: 0!important;
+
+}

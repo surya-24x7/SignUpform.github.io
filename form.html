@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form</title>
+
+</head>
+<body>
+
+	<form onsubmit="return myfun()">
+		
+		<label>Username :</label>
+		<input type="text" name="Username" placeholder="Username" id="name" autocomplete="off">
+		<span id="sname"></span>
+		<br><br>
+		<label>Password :</label>
+		<input type="password" name="Username" placeholder="Password" id="pword">
+		<span id="spword"></span>
+		<br><br>
+		<label>email :</label>
+		<input type="text" name="Username" placeholder="email" id="emailid">
+		<span id="semail"></span>
+		<br><br>
+		<label>Number :</label>
+		<input type="text" name="Username" placeholder="Number" id="num">
+		<span id="snum"></span>
+		<br><br>
+
+
+
+		<br>
+
+		<button type="Submit" value="">Submit</button>
+
+
+
+
+
+
+	</form>
+
+
+
+
+
+<script >
+	
+function myfun()
+{
+
+//username....
+
+	var name=document.getElementById('name').value;
+	
+
+	if(name==""){
+		
+		document.getElementById('sname').innerHTML="fill the blanks fields";
+		return false;
+	}
+
+	if(name.length<=5)
+	{
+		document.getElementById('sname').innerHTML="username must be 8 characters long";
+		return false;
+	}
+
+//password...
+
+ 	var password=document.getElementById('pword').value;
+
+ 	if(password=="")
+ 	{
+ 		document.getElementById('spword').innerHTML="fill the blanks fields";
+		return false;
+ 	}
+
+ 	if(password.length<=5)
+ 	{
+ 	document.getElementById('spword').innerHTML="password must be 8 characters long";
+		return false;	
+ 	}
+
+ 	else(password.length>=15)
+ 	{
+ 	document.getElementById('spword').innerHTML="password must be less than 12 characters";
+		return false;		
+ 	}
+
+//email...
+
+	var email=document.getElementById('emailid').value;
+
+	if(email=="")
+ 	{
+ 		document.getElementById('semail').innerHTML="fill the blanks fields";
+		return false;
+ 	}
+
+ 	if(email.indexOf('@')<=0)
+
+ 	{
+ 		document.getElementById('semail').innerHTML="invalid position of @";
+ 		return false;
+ 	}
+
+ 	if((email.charAt(email.length-4)!='.') && (email.charAt(email.length-3)!='.'))
+ 	{
+ 		document.getElementById('semail').innerHTML="ivalid position of .";
+ 		return false;	
+ 	}
+
+//mobile num...
+	
+	
+
+
+var mobile=document.getElementById('num').value;
+
+	if(mobile==""){
+		document.getElementById('snum').innerHTML="enter the values";
+ 		return false;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+</script>
+
+
+
+
+
+</body>
+</html>
